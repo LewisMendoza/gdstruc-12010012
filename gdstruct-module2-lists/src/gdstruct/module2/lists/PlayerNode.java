@@ -4,6 +4,8 @@ public class PlayerNode {
     private Player player;
     private PlayerNode nextPlayer;
 
+    private PlayerNode prevPlayer;
+
     public PlayerNode(Player player) {
         this.player = player;
     }
@@ -20,8 +22,10 @@ public class PlayerNode {
         return nextPlayer;
     }
 
-    public void setNextPlayer(PlayerNode nextPlayer) {
-        this.nextPlayer = nextPlayer;
-    }
+    public void setNextPlayer(PlayerNode nextPlayer) { this.nextPlayer = nextPlayer; }
+
+    public PlayerNode getPrevPlayer() { return prevPlayer; }
+
+    public void setPrevPlayer(PlayerNode prevPlayer) { this.prevPlayer = prevPlayer; }
 }
 
